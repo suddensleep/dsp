@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I am using emacs as my standard terminal editor. After going through the tutorials for both emacs and vim, I found the controls a little bit more intuitive for emacs. I will be trying to use both somewhat equally until the beginning of the bootcamp, just to become familiar with each of them. 
 
 ---
 
@@ -61,6 +61,6 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will be trying to use emacs and/or vim for all my editing, but since this will be a huge step for me (if I can achieve it) I'll also be trying out Spyder and/or Jupyter. I like the multi-window abilities in emacs, especially being able to scroll in one window while typing in another with C-M-v.
 
 ---
