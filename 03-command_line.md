@@ -169,10 +169,28 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 
 ```
 'ls' prints a list of the contents of the present working directory. 
-When combined with the option '-a', the command prints items in the directory that begin with '.'; for example, in my cloned local copy of the dsp repository, 'ls -a' prints the normally-visible contents of dsp/ as well as '.', '..', '.DS_Store', '.git', and '.gitignore'.
-When combined with the option '-l', the command prints a detailed, formatted list of the contents of the present working directory. This display shows the permissions ("file mode"), the number of links to each item, owner name, group name, number of bytes, exact time of last modification, and path name.
-When we add on the option '-lh', the only change from '-l' is that appropriate units are used in displaying file size. For example, a 1M file would be displayed as such rather than as 1024K or as 1048576B.
-Note that the '-h' option only does anything when used in conjunction with the '-l' option. Using 'ls -h' or 'ls -ah' will not give an error, but the h's will essentially be ignored since file size is not printed at all. We can, of course, combine all three of these options: 'ls -alh' will print the long form contents of the current working directory, including those items starting with '.', and using appropriate unit suffixes to display file sizes. 
+
+When combined with the option '-a', the command prints items in the directory 
+that begin with '.'; for example, in my cloned local copy of the dsp 
+repository, 'ls -a' prints the normally-visible contents of dsp/ as well as
+'.', '..', '.DS_Store', '.git', and '.gitignore'.
+
+When combined with the option '-l', the command prints a detailed, 
+formatted list of the contents of the present working directory. This
+display shows the permissions ("file mode"), the number of links to 
+each item, owner name, group name, number of bytes, exact time of 
+last modification, and path name.
+
+When we add on the option '-lh', the only change from '-l' is that 
+appropriate units are used in displaying file size. For example, a 
+1M file would be displayed as such rather than as 1024K or as 1048576B.
+Note that the '-h' option only does anything when used in conjunction 
+with the '-l' option. Using 'ls -h' or 'ls -ah' will not give an error, 
+but the h's will essentially be ignored since file size is not printed 
+at all. We can, of course, combine all three of these options: 'ls -alh' 
+will print the long form contents of the current working directory, 
+including those items starting with '.', and using appropriate unit 
+suffixes to display file sizes. 
 ```
 ---
 
@@ -182,11 +200,18 @@ Note that the '-h' option only does anything when used in conjunction with the '
 What does `xargs` do? Give an example of how to use it.
 
 ```
-'xargs' reads in a list of arguments and supplies them as input for a utility. xargs can do this from standard input (default) or you can pipe in your argument list to xargs. The example below shows how you can delete all of the .txt files in the present working directory (and all its subdirectories):
+'xargs' reads in a list of arguments and supplies them as input for a 
+utility. xargs can do this from standard input (default) or you can pipe
+in your argument list to xargs. The example below shows how you can 
+delete all of the .txt files in the present working directory 
+(and all its subdirectories):
 
 find . -name "*.txt" -print | xargs rm
 
-While this seems like it would certainly be useful in certain (probably more complicated) cases, it does certainly seem easier in this case to simply run the command 'rm *.txt', which does the same thing. I will be on the lookout for ways that xargs gets around more complicated constructions.
+While this seems like it would certainly be useful in certain (probably 
+more complicated) cases, it does certainly seem easier in this case to 
+simply run the command 'rm *.txt', which does the same thing. I will be 
+on the lookout for ways that xargs gets around more complicated constructions.
 ```
 ---
 
