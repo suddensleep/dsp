@@ -16,22 +16,22 @@ Use regular expressions to:
 
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> There are: 1 MD, 1 MA, 6 ScD, 1 BSEd, 31 PhD, 2 MPH, 2 MS, and 1 JD.
 
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> There are: 13 professors, 12 Associate Professors, and 12 Assistant Professors.
 
 
 ####Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
->> REPLACE THIS WITH YOUR RESPONSE
-
+>> ['bellamys@mail.med.upenn.edu', 'warren@upenn.edu', 'bryanma@upenn.edu', 'jinboche@upenn.edu', 'sellenbe@upenn.edu', 'jellenbe@mail.med.upenn.edu', 'ruifeng@upenn.edu', 'bcfrench@mail.med.upenn.edu', 'pgimotty@upenn.edu', 'wguo@mail.med.upenn.edu', 'hsu9@mail.med.upenn.edu', 'rhubb@mail.med.upenn.edu', 'whwang@mail.med.upenn.edu', 'mjoffe@mail.med.upenn.edu', 'jrlandis@mail.med.upenn.edu', 'liy3@email.chop.edu', 'mingyao@mail.med.upenn.edu', 'hongzhe@upenn.edu', 'rlocalio@upenn.edu', 'nanditam@mail.med.upenn.edu', 'knashawn@mail.med.upenn.edu', 'propert@mail.med.upenn.edu', 'mputt@mail.med.upenn.edu', 'sratclif@upenn.edu', 'michross@upenn.edu', 'jaroy@mail.med.upenn.edu', 'msammel@cceb.med.upenn.edu', 'shawp@upenn.edu', 'rshi@mail.med.upenn.edu', 'hshou@mail.med.upenn.edu', 'jshults@mail.med.upenn.edu', 'alisaste@mail.med.upenn.edu', 'atroxel@mail.med.upenn.edu', 'rxiao@mail.med.upenn.edu', 'sxie@mail.med.upenn.edu', 'dxie@upenn.edu', 'weiyang@mail.med.upenn.edu']
 
 ####Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> There are 4 unique email domains in the list, and they are: set(['email.chop.edu', 'upenn.edu', 'cceb.med.upenn.edu', 'mail.med.upenn.edu']).
+
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
@@ -44,6 +44,7 @@ Place your code in this file: [advanced_python_regex.py](python/advanced_python_
 Place your code in this file: [advanced_python_csv.py](python/advanced_python_csv.py)
 
 Your file, emails.csv, will look like this:
+
 ```
 bellamys@mail.med.upenn.edu
 warren@upenn.edu
@@ -69,7 +70,18 @@ faculty_dict = { 'Ellenberg': [\
 ```
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> Note: this is printed after alphabetical ordering by key (i.e. last name). The output from the program does not look exactly like this, because I had to transform the dictionary to a list of tuples to be able to sort.
+
+```
+{'Bellamy': [
+	[['ScD'], 'Associate Professor','bellamys@mail.med.upenn.edu']],
+'Bilker': [
+	[['PhD'], 'Professor', 'warren@upenn.edu']],
+'Bryan': [
+	[['PhD'], 'Assistant Professor', 'bryanma@upenn.edu']],
+...}
+
+```
 
 ####Q7.  The previous dictionary does not have the best design for keys.  Create a new dictionary with keys as:
 
@@ -84,11 +96,30 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> Again, the output doesn't look exactly like this, but instead like a list of tuples. 
 
+```
+{ ('A. Russell', 'Localio'): [
+	['JD', 'MA', 'MPH', 'MS', 'PhD'], 'Associate Professor', 'rlocalio@upenn.edu'], 
+('Alisa Jane', 'Stephens'): [
+	['PhD'], 'Assistant Professor', 'alisaste@mail.med.upenn.edu'],
+('Andrea Beth', 'Troxel'): [
+	['ScD'], 'Professor', 'atroxel@mail.med.upenn.edu'],
+...}
+```
 ####Q8.  It looks like the current dictionary is sorted by first name.  Sort by last name and print the first 3 key and value pairs.  
 
->> REPLACE THIS WITH YOUR RESPONSE
+>> Again converted back to dictionary format.
+
+```
+{ ('Scarlett L.', 'Bellamy'): [
+	['ScD'], 'Associate Professor', 'bellamys@mail.med.upenn.edu'],
+('Warren B.', 'Bilker'): [
+	['PhD'], 'Professor', 'warren@upenn.edu'],
+('Matthew W', 'Bryan'): [
+	['PhD'], 'Assistant Professor', 'bryanma@upenn.edu'],
+...}
+```
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
 
