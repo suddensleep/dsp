@@ -1,6 +1,7 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 
+import string
 
 def donuts(count):
     """
@@ -18,7 +19,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    donutStr =  'Number of donuts: ' 
+    if count < 10:
+        return donutStr + str(count)
+    return donutStr + 'many'
 
 
 def both_ends(s):
@@ -37,7 +41,9 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ''
+    return s[:2] + s[-2:]
 
 
 def fix_start(s):
@@ -56,7 +62,7 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    return s[0] + s[1:].replace(s[0], '*')
 
 
 def mix_up(a, b):
@@ -74,7 +80,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
 
 
 def verbing(s):
@@ -91,7 +97,11 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) < 3:
+        return s
+    if s[-3:] == 'ing':
+        return s + 'ly'
+    return s + 'ing'
 
 
 def not_bad(s):
@@ -111,8 +121,13 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
-
+    firstNot = string.find(s, 'not')
+    if firstNot == -1:
+        return s
+    firstBad = string.find(s[firstNot + 3:], 'bad')
+    if firstBad == -1:
+        return s
+    return s[:firstNot] + 'good' + s[firstNot + firstBad + 6:]
 
 def front_back(a, b):
     """
@@ -130,4 +145,6 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    halfA = (len(a) + 1) / 2
+    halfB = (len(b) + 1) / 2
+    return a[:halfA] + b[:halfB] + a[halfA:] + b[halfB:]
