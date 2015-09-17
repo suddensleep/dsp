@@ -53,26 +53,22 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 >> Here we are asked for the probability that Elvis was an identical twin, given the fact that he had a twin brother. The background knowledge implicit here is that there are two types of twins: fraternal and identical. Fraternal twins come from two different eggs and can be different genders; identical twins come from the same egg and share all chromosomal information, so they must be the same gender. We will further assume that the likelihood of any baby being male or female is 0.5.
 >> 
 >> Let's denote the following events:
->> 
->> M = a child is born male
->> 
->> F = a child is born female
->> 
+>>  
 >> T = Elvis had a twin brother
 >> 
->> I = Elvis was an identical twin
+>> Id = Elvis was an identical twin
 >> 
 >> Fr = Elvis was a fraternal twin
 >> 
->> We are asked to find $p(I \mid T)$, which by Bayes's Theorem can be caluculated by the formula:
->> $$p(I \mid T) = \frac{p(I) \cdot p(T \mid I)}{p(T)}$$
->> Now, we are given that $p(I) = \frac{1}{300}$, and our background assumptions about types of twins imply that $p(T \mid I) = 1$, since if Elvis was an identical twin, his twin would have to be the same gender. 
+>> We are asked to find p(Id | T), which by Bayes's Theorem can be caluculated by the formula:
+>> ![eq1](eq1.png)
+>> Now, we are given that p(Id) = 1 / 300, and our background assumptions about types of twins imply that p(T | Id) = 1, since if Elvis was an identical twin, his twin would have to be the same gender. 
 >> 
->> Finding a value for $p(T)$ is a little bit trickier, but not much. We can use the law of total probability to write: 
->> $$p(T) = p(T \mid I) \cdot p(I) + p(T \mid Fr) \cdot p(Fr),$$
+>> Finding a value for p(T) is a little bit trickier, but not much. We can use the law of total probability to write: 
+>> ![eq2](eq2.png)
 >> which simplifies to:
->> $$p(T) = 1 \cdot \frac{1}{300} + \frac{1}{2} \cdot \frac{1}{125} = \frac{11}{1500}$$
->> In conclusion, the value of $p(I \mid T)$ is equal to $\frac{5}{11}$, or about a $45\%$ chance that Elvis was an identical twin.
+>> ![eq3](eq3.png)
+>> In conclusion, the value of p(Id | T) is equal to 5 / 11, or about a 45% chance that Elvis was an identical twin.
 
 ---
 
