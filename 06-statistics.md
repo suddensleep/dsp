@@ -61,13 +61,19 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 >> Fr = Elvis was a fraternal twin
 >> 
 >> We are asked to find p(Id | T), which by Bayes's Theorem can be caluculated by the formula:
+>> 
 >> ![eq1](eq1.png)
+>> 
 >> Now, we are given that p(Id) = 1 / 300, and our background assumptions about types of twins imply that p(T | Id) = 1, since if Elvis was an identical twin, his twin would have to be the same gender. 
 >> 
 >> Finding a value for p(T) is a little bit trickier, but not much. We can use the law of total probability to write: 
+>> 
 >> ![eq2](eq2.png)
+>> 
 >> which simplifies to:
+>> 
 >> ![eq3](eq3.png)
+>> 
 >> In conclusion, the value of p(Id | T) is equal to 5 / 11, or about a 45% chance that Elvis was an identical twin.
 
 ---
