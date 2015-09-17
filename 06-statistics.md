@@ -50,14 +50,38 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Here we are asked for the probability that Elvis was an identical twin, given the fact that he had a twin brother. The background knowledge implicit here is that there are two types of twins: fraternal and identical. Fraternal twins come from two different eggs and can be different genders; identical twins come from the same egg and share all chromosomal information, so they must be the same gender. We will further assume that the likelihood of any baby being male or female is 0.5.
+>> 
+>> Let's denote the following events:
+>> 
+>> M = a child is born male
+>> 
+>> F = a child is born female
+>> 
+>> T = Elvis had a twin brother
+>> 
+>> I = Elvis was an identical twin
+>> 
+>> Fr = Elvis was a fraternal twin
+>> 
+>> We are asked to find $p(I \mid T)$, which by Bayes's Theorem can be caluculated by the formula:
+>> $$p(I \mid T) = \frac{p(I) \cdot p(T \mid I)}{p(T)}$$
+>> Now, we are given that $p(I) = \frac{1}{300}$, and our background assumptions about types of twins imply that $p(T \mid I) = 1$, since if Elvis was an identical twin, his twin would have to be the same gender. 
+>> 
+>> Finding a value for $p(T)$ is a little bit trickier, but not much. We can use the law of total probability to write: 
+>> $$p(T) = p(T \mid I) \cdot p(I) + p(T \mid Fr) \cdot p(Fr),$$
+>> which simplifies to:
+>> $$p(T) = 1 \cdot \frac{1}{300} + \frac{1}{2} \cdot \frac{1}{125} = \frac{11}{1500}$$
+>> In conclusion, the value of $p(I \mid T)$ is equal to $\frac{5}{11}$, or about a $45\%$ chance that Elvis was an identical twin.
 
 ---
 
 ###Q8. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Freqentist statistics is based on the notions of "repeated trials" and the probability that you are properly representing some abstract "population" based on a necessarily finite sample. We measure direct statistics like means and variances in the sample, and then use hypothesis testing or regression modeling to generalize to a larger population, often times using "simulations" of data. Its strength lies in its ability to tell us how often we are "right" in our estimations. One of its weaknesses is (for me at least) the ease with which it can be misconstrued or misunderstood. For example, Downey's explanation of a 90% confidence interval: out of 1000 simulations, 90% of the estimations (for mu, let's say) fall between two given values. However, it's rather confusing that this does NOT imply a 90% probability that the real value of mu is in this interval. 
+>> 
+>> Bayesian statistics is based on using background information to form a prior hypothesis, then augmenting that hypothesis by considering observed data. The result is a posterior hypothesis, which ideally is more accurate than the prior. The strength of the bayesian approach is its flexibility: you can choose different priors and see whether the data given makes them converge, and you can weigh the benefits of different assumptions you make based on the real-world knowledge you have. Its weakness is that much of this background knowledge that goes into forming prior hypotheses can be considered subjective, which matters a lot when there's not much data to work with.
 
 ---
 
